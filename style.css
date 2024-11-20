@@ -96,7 +96,7 @@ label {
   transform: scale(0.8);
 }
 
-.title {
+h1 {
   font-size: 100px;
   margin-bottom: 12px;
   text-align: left;
@@ -104,7 +104,9 @@ label {
 }
 
 .green {
-  color: #29dc3b;
+  background: linear-gradient(135deg, rgb(0, 151, 178) 0%, rgb(126, 217, 87) 100%);
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
 .link__hover-effect {
@@ -150,7 +152,7 @@ nav,
   transition: all 400ms;
 }
 
-.dark-theme .title,
+.dark-theme h1,
 .dark-theme .section__title,
 .dark-theme .section__sub-title,
 .dark-theme .nav__link--anchor,
@@ -164,7 +166,11 @@ nav,
 }
 
 .dark-theme #personal-logo {
-  filter: none;
+  display: none;
+}
+
+.dark-theme .personal-logo__2 {
+  display: flex;
 }
 
 .dark-theme .scroll__icon {
@@ -213,7 +219,7 @@ LANDING
 }
 
 .social__link {
-  background-color: #29dc3b;
+  background: linear-gradient(135deg, rgb(0, 151, 178) 0%, rgb(126, 217, 87) 100%);
   color: white;
   padding: 6px;
   width: 32px;
@@ -293,8 +299,14 @@ nav {
 #personal-logo {
   width: 50px;
   height: 50px;
-  filter: invert(1);
   border-radius: 10px;
+}
+
+.personal-logo__2 {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  display: none;
 }
 
 .nav__link--list {
@@ -424,8 +436,8 @@ MODAL
 }
 
 .form__submit {
-  background-color: #29dc3b;
-  border: 2px solid #29dc3b;
+  background: linear-gradient(135deg, rgb(0, 151, 178) 0%, rgb(126, 217, 87) 100%);
+  border: none;
   color: white;
   font-weight: 700;
   width: 100%;
@@ -437,13 +449,8 @@ MODAL
 }
 
 .form__submit:hover {
-  border-color: white;
-  background-color: transparent;
-}
-
-.form__submit:active {
-  border-color: #29dc3b;
-  color: #29dc3b;
+  transform: translate(1px, 1px);
+  box-shadow: 0 20px 80px 0 rgb(0, 0, 0, 0.5);
 }
 
 .modal__overlay {
@@ -672,7 +679,7 @@ RESPONSIVE
 
 /* small Phones, tablets, large smart phones */
 @media (max-width: 768px) {
-  .title {
+  h1 {
     font-size: 80px;
   }
   .header__para {
@@ -695,7 +702,7 @@ RESPONSIVE
 
 /* small phones */
 @media (max-width: 480px) {
-  .title {
+  h1 {
     font-size: 52px;
   }
   .header__para {
